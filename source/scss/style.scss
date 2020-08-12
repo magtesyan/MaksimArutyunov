@@ -1,0 +1,12 @@
+@import "font-face";
+@import "variables";
+@import "global";
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/logo";
+
+.page__wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

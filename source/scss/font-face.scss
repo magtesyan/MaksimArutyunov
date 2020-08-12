@@ -1,0 +1,40 @@
+/* lato - regular */
+@font-face {
+  font-family: "Lato";
+  font-style: regular;
+  font-weight: 400;
+  src: url("/fonts/Lato/Lato-Regular.ttf");
+  src: local("Lato Regular");
+}
+/* lato - bold */
+@font-face {
+  font-family: "Lato";
+  font-style: bold;
+  font-weight: 600;
+  src: url("/fonts/Lato/Lato-Bold.ttf");
+  src: local("Lato Bold");
+}
+/* playfair display - bold */
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-style: bold;
+  font-weight: 600;
+  src: url("/fonts/PlayfairDisplay/PlayfairDisplay-Bold.ttf");
+  src: local("PlayfairDisplay Bold");
+}
+/* open sans - bold */
+@font-face {
+  font-family: "OpenSans";
+  font-style: bold;
+  font-weight: 600;
+  src: url("/fonts/OpenSans/OpenSans-Bold.ttf");
+  src: local("OpenSans Bold");
+}
+/* open sans - extra bold */
+@font-face {
+  font-family: "OpenSans";
+  font-style: bold;
+  font-weight: 800;
+  src: url("/fonts/OpenSans/OpenSans-ExtraBold.ttf");
+  src: local("OpenSans ExtraBold");
+}

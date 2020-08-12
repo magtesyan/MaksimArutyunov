@@ -1,0 +1,22 @@
+.page__header {
+  min-height: 100vh;
+  margin: 0;
+  background-color: $black;
+  background-image: url('../../img/background.jpg');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav__logo {
+  align-items: center;
+  display: flex;
+
+  img {
+    width: 100px;
+  }
+}
