@@ -67,14 +67,3 @@ npm i
 ```sh
 npm start
 ```
-
-## Авторы
-
-👤 **[Webtime.Studio](https://github.com/webtime-studio)**
-
-- [Павел Клочков @ckomop0x](https://github.com/ckomop0x)
-- [Тина Кузьменко @tinakuzmenko](https://github.com/tinakuzmenko)
-
-## Show your support
-
-Поставьте нам звёздочку ⭐️ если этот проект помог вам!
