@@ -1,7 +1,17 @@
-.page__header {
+.header {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   background-color: $black;
   background-image: url('../../img/background.jpg');
   background-size: cover;
   background-position: center bottom;
+}
+
+.header__title {
+  margin-top: 500px;
+}
+
+.header__invite-button {
+  margin: auto;
 }

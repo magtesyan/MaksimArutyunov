@@ -1,0 +1,19 @@
+.headings {
+    text-align: center;
+    text-shadow: 0 17px 21px $black, 3px 0px 25px $black, -3px 0px 14px $black, -19px -36px 23px $black;
+}
+
+.headings__description {
+    color: $white;
+    font-family: $link-font;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.headings__main-title {
+    color: $white;
+    font-family: $heading-font;
+    font-size: 80px;
+    font-weight: 600;
+}

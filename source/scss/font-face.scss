@@ -16,15 +16,15 @@
 }
 /* playfair display - bold */
 @font-face {
-  font-family: "PlayfairDisplay";
+  font-family: "Playfair Display";
   font-style: bold;
   font-weight: 600;
-  src: url("/fonts/PlayfairDisplay/PlayfairDisplay-Bold.ttf");
-  src: local("PlayfairDisplay Bold");
+  src: url("/fonts/PlayfairDisplay/PlayfairDisplay-Bold.ttf") format('truetype');
+  src: local("PlayfairDisplay-Bold");
 }
 /* open sans - bold */
 @font-face {
-  font-family: "OpenSans";
+  font-family: "Open Sans";
   font-style: bold;
   font-weight: 600;
   src: url("/fonts/OpenSans/OpenSans-Bold.ttf");
@@ -32,7 +32,7 @@
 }
 /* open sans - extra bold */
 @font-face {
-  font-family: "OpenSans";
+  font-family: "Open Sans";
   font-style: bold;
   font-weight: 800;
   src: url("/fonts/OpenSans/OpenSans-ExtraBold.ttf");
