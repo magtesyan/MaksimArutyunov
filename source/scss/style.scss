@@ -4,9 +4,7 @@
 @import "blocks/container";
 @import "blocks/header";
 @import "blocks/logo";
-
-.page__wrapper {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+@import "blocks/page";
+@import "blocks/page-wrapper";
+@import "blocks/nav";
+@import "blocks/nav-links";

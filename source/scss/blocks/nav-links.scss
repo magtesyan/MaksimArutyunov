@@ -1,0 +1,23 @@
+.nav-links {
+    display: flex;
+}
+
+.nav-links__item {
+    margin-right: 20px;
+
+    a {
+        color: $white;
+    }
+
+    a:hover {
+        color: $yellow;
+    }
+
+    &_active {
+        a {
+            color: $yellow;
+            padding-bottom: 3px;
+            border-bottom: 2px solid $yellow;
+        }
+    }
+}

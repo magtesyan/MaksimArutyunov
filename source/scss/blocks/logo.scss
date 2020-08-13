@@ -1,14 +1,6 @@
 .logo {
   display: flex;
   flex-shrink: 0;
-  height: 83px;
-  width: 72px;
-}
-
-.logo__description {
-  display: none;
-
-  @media screen and (min-width: $md) {
-    display: flex;
-  }
+  height: 81px;
+  width: 182px;
 }
