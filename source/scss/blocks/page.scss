@@ -3,7 +3,8 @@
 }
 
 .page__main {
-    &_about {
+    &_about,
+    &_clients {
         margin: auto;
     }
 }
