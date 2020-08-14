@@ -1,0 +1,17 @@
+.event-list {
+    display: flex;
+}
+
+.event-list__item {
+    width: 180px;
+    padding: 0 5px;
+    font-family: $link-font;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    border-right: 1px solid $greyLight;
+
+    &:last-child {
+        border: none;
+    }
+}

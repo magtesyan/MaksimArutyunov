@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-bottom: 50px;
   background-color: $black;
   background-image: url('../../img/background.jpg');
   background-size: cover;
@@ -9,9 +10,10 @@
 }
 
 .header__title {
-  margin-top: 500px;
+  margin-top: auto;
 }
 
 .header__invite-button {
   margin: auto;
+  text-shadow: none;
 }
