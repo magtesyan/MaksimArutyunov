@@ -38,7 +38,7 @@ const htmlPlugins = generateHtmlPlugins("./source/html/views");
 module.exports = {
   mode: isProd ? "production" : "development",
   entry: {
-    bundle: "./source/js/script.js",
+    bundle: "./source/js/index.js",
     style: "./source/scss/style.scss",
   },
   devtool: "inline-source-map",
