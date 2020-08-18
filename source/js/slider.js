@@ -32,7 +32,7 @@ const slide = () => {
   next.classList.toggle('disabled', slideIndex === slides.length - 3);
 };
 
-const getEvent = () => event.type.search('touch') !== -1 ? event.touches[0] : event;
+const getEvent = () => (event.type.search('touch') !== -1 ? event.touches[0] : event);
 
 const swipeStart = () => {
   const evt = getEvent();
@@ -108,7 +108,7 @@ const swipeAction = () => {
     }
 
     // запрет протаскивания дальше одного слайда
-    if (posInit > posX1 && transform < nextTrf || posInit < posX1 && transform > prevTrf) {
+    if ((posInit > posX1 && transform < nextTrf) || (posInit < posX1 && transform > prevTrf)) {
       reachEdge();
       return;
     }
@@ -122,7 +122,7 @@ const swipeEnd = () => {
   // финальная позиция курсора
   posFinal = posInit - posX1;
 
-    isScroll = false;
+  isScroll = false;
   isSwipe = false;
 
   document.removeEventListener('touchmove', swipeAction);
@@ -148,7 +148,6 @@ const swipeEnd = () => {
     } else {
       allowSwipe = true;
     }
-
   } else {
     allowSwipe = true;
   }
@@ -170,11 +169,11 @@ const reachEdge = () => {
 };
 
 sliderTrack.style.transform = 'translate3d(0px, 0px, 0px)';
-sliderTrack.addEventListener('transitionend', () => allowSwipe = true);
+sliderTrack.addEventListener('transitionend', () => (allowSwipe = true));
 slider.addEventListener('touchstart', swipeStart);
 slider.addEventListener('mousedown', swipeStart);
 
-arrows.addEventListener('click', function() {
+arrows.addEventListener('click', function () {
   let target = event.target;
   if (target.classList.contains('slider__arrows_next')) {
     slideIndex++;

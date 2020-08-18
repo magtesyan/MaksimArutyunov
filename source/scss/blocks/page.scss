@@ -1,14 +1,14 @@
 .page__header {
-    margin: 0;
+  margin: 0;
 }
 
 .page__footer {
-    margin: auto;
+  margin: auto;
 }
 
 .page__main {
-    &_about,
-    &_clients {
-        margin: auto;
-    }
+  &_about,
+  &_clients {
+    margin: auto;
+  }
 }

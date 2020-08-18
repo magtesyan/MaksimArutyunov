@@ -1,92 +1,92 @@
 .slider {
-    width: 930px;
-    margin: auto;
-    position: relative;
-    user-select: none; /* Чтобы во время перетаскивания слайда ничего не выделить внутри него */
-    touch-action: pan-y; /* Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X */
+  width: 930px;
+  margin: auto;
+  position: relative;
+  user-select: none; /* Чтобы при перетаскивании слайда ничего не выделить внутри него */
+  touch-action: pan-y; /* Чтобы запретить скролл страницы, если слайдер движется по X */
 }
 .slider-track {
-    display: flex;
-    padding: 0;
+  display: flex;
+  padding: 0;
 }
 .slider-list {
-    width: 930px;
-    overflow: hidden;
+  width: 930px;
+  overflow: hidden;
 }
 .slider .slide {
-    flex-shrink: 0;
-    margin-right: 10px;
+  flex-shrink: 0;
+  margin-right: 10px;
 }
 /* Картинка мастабируется по отношению к родительскому элементу */
 .slider .slide img {
-    pointer-events: none; /* чтобы не перетаскивались мышью */
-    object-fit: cover;
-    width: 300px;
-    border: none !important;
-    box-shadow: none !important;
+  pointer-events: none;
+  object-fit: cover;
+  width: 300px;
+  border: none;
+  box-shadow: none;
 }
 
 .slider__arrows {
-    &_prev,
-    &_next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        margin-top: -22px;
-        padding: 16px;
-        font-weight: bold;
-        font-size: 32px;
-        transition: 1s ease;
-        color: yellow;
+  &_prev,
+  &_next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 32px;
+    transition: 1s ease;
+    color: yellow;
 
-        background: none;
-        border: 1px solid white;
-    }
+    background: none;
+    border: 1px solid white;
+  }
 
-    &_prev {
-        left: -100px;
-        border-radius: 5px 0 0 5px;
-    }
+  &_prev {
+    left: -100px;
+    border-radius: 5px 0 0 5px;
+  }
 
-    &_next {
-        right: -100px;
-        border-radius: 0 5px 5px 0;
-    }
+  &_next {
+    right: -100px;
+    border-radius: 0 5px 5px 0;
+  }
 
-    &_prev.disabled,
-    &_next.disabled {
-        opacity: .25;
-        pointer-events: none;
-    }
+  &_prev.disabled,
+  &_next.disabled {
+    opacity: 0.25;
+    pointer-events: none;
+  }
 
-    &_prev:hover,
-    &_next:hover {
-        background-color: yellow;
-        color: black;
-    }
+  &_prev:hover,
+  &_next:hover {
+    background-color: yellow;
+    color: black;
+  }
 }
 
 /* Анимация слайдов */
 .slider .item {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 @-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
