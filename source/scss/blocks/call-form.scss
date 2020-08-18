@@ -11,10 +11,35 @@
   color: $grey;
 }
 
+.call-form__input-wrapper {
+  position: relative;
+  display: inline-block;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 15px;
+    top: 15px;
+    background-size: cover;
+    background-position: left center;
+  }
+
+  &_name::before {
+    background-image: url("../../img/contacts/name.png");
+  }
+
+  &_phone::before {
+    background-image: url("../../img/contacts/phone.png");
+  }
+}
+
 .call-form__field {
   width: 90%;
   height: 41px;
-  margin: 10px 15px;
+  margin: 10px 15px 0;
+  padding-left: 40px;
   font-weight: 600;
   text-transform: uppercase;
   color: black;

@@ -33,8 +33,12 @@
     <div class="contacts__form contacts-call">
       <p class="contacts__title contacts-call__title">или оставьте свои контакты для обратного звонка</p>
       <form class="contacts-call__form call-form">
-        <input class="call-form__field" type="text" placeholder="Имя" required>
-        <input class="call-form__field" type="text" placeholder="Телефон" required>
+        <div class="call-form__input-wrapper call-form__input-wrapper_name">
+          <input class="call-form__field call-form__field_name" type="text" placeholder="Имя" required>
+        </div>
+        <div class="call-form__input-wrapper call-form__input-wrapper_phone">
+          <input class="call-form__field call-form__field_phone" type="text" placeholder="Телефон" required>
+        </div>
         <button class="call-form__button button" type="submit">Отправить</button>
       </form>
     </div>
