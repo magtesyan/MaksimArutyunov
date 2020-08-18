@@ -1,0 +1,15 @@
+.contacts-write {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: $black;
+
+    a {
+        color: $greyLight;
+    }
+}
+
+.contacts-write__title {
+    color: $greyLight;
+}

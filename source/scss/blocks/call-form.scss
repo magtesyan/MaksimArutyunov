@@ -1,0 +1,28 @@
+.call-form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    border: 2px solid $black;
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color:$grey;
+}
+
+.call-form__field {
+    width: 90%;
+    height: 41px;
+    margin: 10px 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: black;
+    background-color: $yellow;
+    border: none;
+    border-bottom: 2px solid black;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}

@@ -1,3 +1,42 @@
-<footer class="container">
-  &copy; <%= new Date().getFullYear() %> HTML Boilerplate
+<footer class="page__footer footer">
+  <h2 class="footer__title">Контакты</h2>
+  <div class="footer__contacts contacts">
+    <div class="contacts__write contacts-write">
+      <p class="contacts__title contacts-write__title">Напишите мне</p>
+      <ul class="contacts-write__list contacts-list">
+        <li class="contacts-list__item">
+          <a class="contacts-list__link" href="tg://resolve?domain=@maksimarutyunov">
+            <img class="contacts-list__icon" src="../../img/contacts/tg-yellow.png" width="50px" height="50px" alt="telegram">
+            <span class="contacts-list__data">@maksimarutyunov</span>
+          </a>
+        </li>
+        <li class="contacts-list__item">
+          <a class="contacts-list__link" href="https://vk.com/maksimarutyunov">
+            <img class="contacts-list__icon" src="../../img/contacts/vk-yellow.png" width="50px" height="50px" alt="vkontakte">
+            <span class="contacts-list__data">vk.com/maksimarutyunov</span>
+          </a>
+        </li>
+        <li class="contacts-list__item">
+          <a class="contacts-list__link" href="https://fb.com/maksimarutyunov">
+            <img class="contacts-list__icon" src="../../img/contacts/fb-yellow.png" width="50px" height="50px" alt="facebook">
+            <span class="contacts-list__data">fb.com/maksimarutyunov</span>
+          </a>
+        </li>
+        <li class="contacts-list__item">
+          <a class="contacts-list__link" href="https://ig.com/maksimarutyunov">
+            <img class="contacts-list__icon" src="../../img/contacts/ig-yellow.png" width="50px" height="50px" alt="instagram">
+            <span class="contacts-list__data">@maksimarutyunov</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="contacts__form contacts-call">
+      <p class="contacts__title contacts-call__title">или оставьте свои контакты для обратного звонка</p>
+      <form class="contacts-call__form call-form">
+        <input class="call-form__field" type="text" placeholder="Имя" required>
+        <input class="call-form__field" type="text" placeholder="Телефон" required>
+        <button class="call-form__button button" type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
 </footer>

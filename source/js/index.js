@@ -1,1 +1,1 @@
-require("./slider.js");
+require(`./slider.js`);
