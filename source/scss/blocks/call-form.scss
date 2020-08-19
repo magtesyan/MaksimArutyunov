@@ -27,11 +27,11 @@
   }
 
   &_name::before {
-    background-image: url("../../img/contacts/name.png");
+    background-image: url("./../img/contacts/name.png");
   }
 
   &_phone::before {
-    background-image: url("../../img/contacts/phone.png");
+    background-image: url("./../img/contacts/phone.png");
   }
 }
 
