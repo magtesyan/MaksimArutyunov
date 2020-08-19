@@ -5,5 +5,51 @@
 }
 
 .photo-list__item {
+  position: relative;
   width: 25%;
+
+  &:hover .photo-list__info {
+    transform: translate(0, -150%);
+    -webkit-transform: translate(0, -150%);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.photo-list__info {
+  position: absolute;
+  display: flex;
+  background-color: rgba($yellow, 0.8);
+  width: 60%;
+  height: 20%;
+  left: 20%;
+  bottom: -20%;
+  text-align: center;
+  vertical-align: middle;
+  transition: all 0.2s 0.1s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+
+  &:hover .photo-list__title {
+    text-decoration: underline;
+  }
+}
+
+.photo-list__title {
+  margin: auto;
+  padding-bottom: 3px;
+  font-family: $heading-font;
+  font-size: 21px;
+  color: $black;
+}
+
+.photo-list__mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+
+  &:hover {
+    box-shadow: inset 0 0 10px $yellow;
+  }
 }
