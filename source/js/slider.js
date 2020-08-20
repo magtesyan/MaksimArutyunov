@@ -1,11 +1,19 @@
+const SLIDES_MARGIN_RIGHT = 10;
+const SLIDES_SHOW_COUNT = 3;
+const SCALE_BORDER_WIDTH = 4;
+
 const slider = document.querySelector('.slider');
 const sliderList = slider.querySelector('.slider-list');
 const sliderTrack = slider.querySelector('.slider-track');
 const slides = slider.querySelectorAll('.slide');
 const arrows = slider.querySelector('.slider__arrows');
+const fullness = slider.querySelector('.slider__fullness');
+const sliderScale = slider.querySelector('.slider__scale');
+const sliderScaleWidth = sliderScale.offsetWidth;
+const fullnessWidthPerSlide = sliderScaleWidth / slides.length;
 const prev = arrows.children[0];
 const next = arrows.children[1];
-const slideWidth = slides[0].offsetWidth + 10;
+const slideWidth = slides[0].offsetWidth + SLIDES_MARGIN_RIGHT;
 let isSwipe = false;
 let isScroll = false;
 let allowSwipe = true;
@@ -19,6 +27,7 @@ let posFinal = 0;
 const lastTrf = -1 * (slides.length - 2) * slideWidth;
 let nextTrf = 0;
 let prevTrf = 0;
+let fullnessWidth = fullnessWidthPerSlide * SLIDES_SHOW_COUNT;
 const posThreshold = slideWidth * 0.35;
 const trfRegExp = /[-0-9.]+(?=px)/;
 
@@ -136,9 +145,11 @@ const swipeEnd = () => {
   if (allowSwipe) {
     if (Math.abs(posFinal) > posThreshold) {
       if (posInit < posX1) {
+        setScaleFullness('prev');
         slideIndex--;
       } else if (posInit > posX1) {
         slideIndex++;
+        setScaleFullness('next');
       }
     }
 
@@ -168,8 +179,24 @@ const reachEdge = () => {
   allowSwipe = true;
 };
 
+const setScaleFullness = operation => {
+  switch (operation) {
+    case 'next':
+      fullnessWidth += fullnessWidthPerSlide;
+      break;
+    case 'prev':
+      fullnessWidth -= fullnessWidthPerSlide;
+      break;
+    default:
+      break;
+  }
+  fullnessWidth >= sliderScaleWidth ? (fullnessWidth = sliderScaleWidth - SCALE_BORDER_WIDTH) : true;
+  fullness.style.width = `${fullnessWidth}px`;
+};
+
 sliderTrack.style.transform = 'translate3d(0px, 0px, 0px)';
 sliderTrack.addEventListener('transitionend', () => (allowSwipe = true));
+setScaleFullness();
 slider.addEventListener('touchstart', swipeStart);
 slider.addEventListener('mousedown', swipeStart);
 
@@ -177,8 +204,10 @@ arrows.addEventListener('click', function () {
   let target = event.target;
   if (target.classList.contains('slider__arrows_next')) {
     slideIndex++;
+    setScaleFullness('next');
   } else if (target.classList.contains('slider__arrows_prev')) {
     slideIndex--;
+    setScaleFullness('prev');
   } else {
     return;
   }
