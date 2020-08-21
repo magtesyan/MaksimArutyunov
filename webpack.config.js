@@ -92,6 +92,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: `source/html/views/index.html`,
+      favicon: `./source/favicon.ico`,
     }),
     new CopyWebpackPlugin({
       patterns: [
