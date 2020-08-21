@@ -107,6 +107,10 @@ module.exports = {
           from: `./source/vendors`,
           to: `./vendors`,
         },
+        {
+          from: `./source/php`,
+          to: `./php`,
+        },
       ],
     }),
     new ImageminPlugin({
