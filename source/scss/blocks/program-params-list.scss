@@ -1,0 +1,19 @@
+.program-params-list {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  margin: 20px auto;
+}
+
+.program-params-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.program-params-list__parameter {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $yellow;
+}

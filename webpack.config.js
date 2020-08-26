@@ -15,10 +15,18 @@ const isProd = process.argv.indexOf(`-p`) !== -1;
 
 function generateHtmlPlugins(templateDir) {
   const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
-  const htmlFiles = templateFiles.filter(templateFile => {
-    const parts = templateFile.split(`.`);
-    return parts[1] === `html`;
-  });
+  // const htmlFiles = templateFiles.filter(templateFile => {
+  //   const parts = templateFile.split(`.`);
+  //   return parts[1] === `html`;
+  // });
+
+  const htmlFiles = templateFiles
+    .filter(templateFile => {
+      return fs.statSync(templateDir + '/' + templateFile).isDirectory();
+    })
+    .reduce((all, subDir) => {
+      return [...all, ...fs.readdirSync(templateDir + '/' + subDir).map(e => subDir + '/' + e)];
+    }, []);
 
   return htmlFiles.map(htmlFile => {
     const parts = htmlFile.split(`.`);
@@ -33,7 +41,8 @@ function generateHtmlPlugins(templateDir) {
   });
 }
 
-const htmlPlugins = generateHtmlPlugins(`./source/html/views`);
+const htmlPlugins = generateHtmlPlugins(`./source/html/views/`);
+const htmlPlugins1 = generateHtmlPlugins(`./source/html/views/corporate`);
 
 module.exports = {
   mode: isProd ? `production` : `development`,
@@ -133,7 +142,9 @@ module.exports = {
       silent: false,
       strict: true,
     }),
-  ].concat(htmlPlugins),
+  ]
+    .concat(htmlPlugins)
+    .concat(htmlPlugins1),
   output: {
     filename: `js/[name].js`,
     path: path.resolve(__dirname, `build`),
