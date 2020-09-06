@@ -1,9 +1,10 @@
 .event-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .event-list__item {
-  width: 180px;
+  width: 172px;
   padding: 0 5px;
   font-family: $link-font;
   font-size: 12px;
@@ -13,5 +14,15 @@
 
   &:last-child {
     border: none;
+  }
+}
+
+@media (max-width: $md) {
+  .event-list__item {
+    width: 154px;
+
+    &:nth-child(2n) {
+      border: none;
+    }
   }
 }

@@ -11,7 +11,7 @@
   font-family: $link-font;
 }
 
-@media (max-width: $md) {
+@media (max-width: $lg) {
   .contacts {
     flex-direction: column;
     align-items: center;

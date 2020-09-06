@@ -6,3 +6,22 @@
   float: right;
   margin-left: 80px;
 }
+
+@media (max-width: $mdUp) {
+  .about {
+    width: $md;
+  }
+  .about__photo {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: $md) {
+  .about {
+    width: $sm;
+  }
+  .about__photo {
+    float: left;
+    margin-left: 0;
+  }
+}

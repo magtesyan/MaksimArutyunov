@@ -55,3 +55,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
+@media (max-width: $md) {
+  body {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

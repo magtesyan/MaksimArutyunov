@@ -38,7 +38,7 @@ const slide = () => {
   sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
 
   prev.classList.toggle('disabled', slideIndex === 0);
-  next.classList.toggle('disabled', slideIndex === slides.length - 3);
+  next.classList.toggle('disabled', slideIndex === slides.length - SLIDES_SHOW_COUNT);
 };
 
 const getEvent = () => (event.type.search('touch') !== -1 ? event.touches[0] : event);
@@ -107,7 +107,7 @@ const swipeAction = () => {
     }
 
     // запрет ухода вправо на последнем слайде
-    if (slideIndex === slides.length - 3) {
+    if (slideIndex === slides.length - SLIDES_SHOW_COUNT) {
       if (posInit > posX1) {
         setTransform(transform, lastTrf);
         return;
@@ -190,7 +190,9 @@ const setScaleFullness = operation => {
     default:
       break;
   }
-  fullnessWidth >= sliderScaleWidth ? (fullnessWidth = sliderScaleWidth - SCALE_BORDER_WIDTH) : true;
+  fullnessWidth >= sliderScaleWidth - SCALE_BORDER_WIDTH ? (fullnessWidth = sliderScaleWidth - SCALE_BORDER_WIDTH) : true;
+  console.log(fullnessWidth);
+  console.log(sliderScaleWidth);
   fullness.style.width = `${fullnessWidth}px`;
 };
 
