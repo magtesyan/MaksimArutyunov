@@ -1,6 +1,6 @@
-let footer = document.querySelector('.footer');
-let inviteBtn = document.querySelector('.header__invite-button');
-let inviteNavLink = document.querySelector('.nav-links__item_contacts');
+let footer = document.querySelector(`.footer`);
+let inviteBtn = document.querySelector(`.header__invite-button`);
+let inviteNavLink = document.querySelector(`.nav-links__item_contacts`);
 
 const clickFooterLinkHandler = evt => {
   console.log(footer);
@@ -11,5 +11,5 @@ const clickFooterLinkHandler = evt => {
   });
 };
 
-inviteBtn.addEventListener('click', clickFooterLinkHandler);
-inviteNavLink.addEventListener('click', clickFooterLinkHandler);
+inviteBtn.addEventListener(`click`, clickFooterLinkHandler);
+inviteNavLink.addEventListener(`click`, clickFooterLinkHandler);
