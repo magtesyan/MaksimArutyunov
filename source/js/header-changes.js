@@ -18,3 +18,8 @@ if (location.href.indexOf('1001night') !== -1) {
   changeBackground(`./../img/backgrounds/1001night.jpg`, `center center`);
   clearActiveClassOfMenu();
 }
+
+if (location.href.indexOf('venecia') !== -1) {
+  changeBackground(`./../img/backgrounds/venecia.jpg`, `center center`);
+  clearActiveClassOfMenu();
+}
