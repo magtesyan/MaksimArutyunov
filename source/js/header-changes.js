@@ -23,3 +23,8 @@ if (location.href.indexOf('venecia') !== -1) {
   changeBackground(`./../img/backgrounds/venecia.jpg`, `center center`);
   clearActiveClassOfMenu();
 }
+
+if (location.href.indexOf('oskar') !== -1) {
+  changeBackground(`./../img/backgrounds/oskar.jpg`, `left center`);
+  clearActiveClassOfMenu();
+}
