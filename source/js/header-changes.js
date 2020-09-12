@@ -10,21 +10,36 @@ const changeBackground = (imgLink, position) => {
 };
 
 if (location.href.indexOf('mafia') !== -1) {
-  changeBackground(`./../img/backgrounds/mafia.jpg`, `left top`);
+  changeBackground(`./../img/backgrounds/mafia.webp`, `left top`);
   clearActiveClassOfMenu();
 }
 
 if (location.href.indexOf('1001night') !== -1) {
-  changeBackground(`./../img/backgrounds/1001night.jpg`, `center center`);
+  changeBackground(`./../img/backgrounds/1001night.webp`, `center center`);
   clearActiveClassOfMenu();
 }
 
 if (location.href.indexOf('venecia') !== -1) {
-  changeBackground(`./../img/backgrounds/venecia.jpg`, `center center`);
+  changeBackground(`./../img/backgrounds/venecia.webp`, `center center`);
   clearActiveClassOfMenu();
 }
 
 if (location.href.indexOf('oskar') !== -1) {
-  changeBackground(`./../img/backgrounds/oskar.jpg`, `left center`);
+  changeBackground(`./../img/backgrounds/oskar.webp`, `left center`);
+  clearActiveClassOfMenu();
+}
+
+if (location.href.indexOf('kid-mafia') !== -1) {
+  changeBackground(`./../img/backgrounds/kid-mafia.webp`, `center center`);
+  clearActiveClassOfMenu();
+}
+
+if (location.href.indexOf('quest-spy') !== -1) {
+  changeBackground(`./../img/backgrounds/quest-spy.webp`, `right top`);
+  clearActiveClassOfMenu();
+}
+
+if (location.href.indexOf('quest-football') !== -1) {
+  changeBackground(`./../img/backgrounds/quest-football.webp`, `center top`);
   clearActiveClassOfMenu();
 }
