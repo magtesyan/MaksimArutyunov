@@ -1,7 +1,7 @@
 const header = document.querySelector(`.header`);
 
 const clearActiveClassOfMenu = () => {
-  let activeMenuItem = document.querySelector(`.nav-links__item_active`).classList.remove(`nav-links__item_active`);
+  document.querySelector(`.nav-links__item_active`).classList.remove(`nav-links__item_active`);
 };
 
 const changeBackground = (imgLink, position) => {
@@ -41,5 +41,10 @@ if (location.href.indexOf('quest-spy') !== -1) {
 
 if (location.href.indexOf('quest-football') !== -1) {
   changeBackground(`./../img/backgrounds/quest-football.webp`, `center top`);
+  clearActiveClassOfMenu();
+}
+
+if (location.href.indexOf('crocodile') !== -1) {
+  changeBackground(`./../img/backgrounds/crocodile.webp`, `center right`);
   clearActiveClassOfMenu();
 }
