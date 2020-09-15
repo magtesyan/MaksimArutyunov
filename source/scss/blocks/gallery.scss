@@ -12,3 +12,15 @@
   margin: auto;
   width: $mdUp;
 }
+
+@media (max-width: $mdUp) {
+  .gallery__intro {
+    width: $md;
+  }
+}
+
+@media (max-width: $md) {
+  .gallery__intro {
+    width: $sm;
+  }
+}
