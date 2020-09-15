@@ -2,3 +2,15 @@
   width: $mdUp;
   margin: auto;
 }
+
+@media (max-width: $mdUp) {
+  .clients__intro {
+    width: $md;
+  }
+}
+
+@media (max-width: $md) {
+  .clients__intro {
+    width: $sm;
+  }
+}
