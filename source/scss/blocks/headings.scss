@@ -22,3 +22,21 @@
   font-size: 80px;
   font-weight: 600;
 }
+
+@media (max-width: $md) {
+  .headings__description {
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 1;
+  }
+  .headings__main-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 45px;
+    line-height: 0.85;
+  }
+  .headings__icon {
+    width: 86px;
+    height: 43px;
+  }
+}

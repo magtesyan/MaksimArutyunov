@@ -12,3 +12,12 @@
     margin: auto;
   }
 }
+
+@media (max-width: $md) {
+  .page__main {
+    &_about,
+    &_clients {
+      padding: 0 5px;
+    }
+  }
+}

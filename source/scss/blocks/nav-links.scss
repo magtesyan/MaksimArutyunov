@@ -21,3 +21,9 @@
     }
   }
 }
+
+@media (max-width: $md) {
+  .nav__links {
+    display: none;
+  }
+}

@@ -127,7 +127,16 @@
   .slider-list {
     width: 550px;
   }
-  .slider .slide img {
-    width: 270px;
+}
+
+@media (max-width: $md) {
+  .slider {
+    width: 260px;
+  }
+  .slider-list {
+    width: 260px;
+  }
+  .slider__arrows {
+    display: none;
   }
 }

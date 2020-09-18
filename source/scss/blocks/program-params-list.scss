@@ -1,5 +1,6 @@
 .program-params-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 600px;
   margin: 20px auto;
@@ -16,4 +17,18 @@
   font-weight: 600;
   text-transform: uppercase;
   color: $yellow;
+}
+
+@media (max-width: $md) {
+  .program-params-list {
+    width: auto;
+    justify-content: center;
+  }
+  .program-params-list__item {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  .program-params-list__parameter {
+    font-size: 11px;
+  }
 }

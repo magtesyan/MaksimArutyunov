@@ -9,3 +9,10 @@
 .contacts-call__title {
   color: $grey;
 }
+
+@media (max-width: $md) {
+  .contacts-call {
+    padding: 20px 8px;
+    width: 100%;
+  }
+}

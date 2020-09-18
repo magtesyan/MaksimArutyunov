@@ -9,3 +9,15 @@
 .footer__contacts {
   margin-bottom: 40px;
 }
+
+@media (max-width: $mdUp) {
+  .footer {
+    width: $md;
+  }
+}
+
+@media (max-width: $md) {
+  .footer {
+    width: $sm;
+  }
+}

@@ -13,3 +13,9 @@
 .contacts-write__title {
   color: $greyLight;
 }
+
+@media (max-width: $md) {
+  .contacts-write {
+    width: 100%;
+  }
+}
