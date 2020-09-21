@@ -5,3 +5,18 @@
   height: 65px;
   width: 182px;
 }
+
+.logo__img {
+  width: 182px;
+  height: 55px;
+}
+
+@media (max-width: $md) {
+  .logo {
+    height: 55px;
+  }
+  .logo__img {
+    width: 147px;
+    height: 45px;
+  }
+}

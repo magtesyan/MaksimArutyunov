@@ -24,6 +24,40 @@
 
 @media (max-width: $md) {
   .nav__links {
-    display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    margin: 0;
+
+    &_hidden {
+      display: none;
+    }
+  }
+  .nav-links__item {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: $yellow;
+    border-bottom: 1px solid $black;
+
+    a {
+      display: block;
+      width: 100%;
+      padding: 10px 0;
+      color: $black;
+    }
+
+    &_active {
+      a {
+        padding: 10px 0;
+        border: none;
+      }
+    }
+  }
+
+  .nav-links__item:last-child {
+    border: none;
   }
 }
