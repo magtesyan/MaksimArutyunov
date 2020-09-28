@@ -100,7 +100,28 @@ module.exports = {
       filename: `css/[name].min.css`,
     }),
     new HtmlWebpackPlugin({
+      filename: `index.html`,
       template: `source/html/views/index.html`,
+      favicon: `./source/favicon.ico`,
+    }),
+    new HtmlWebpackPlugin({
+      filename: `corporate.html`,
+      template: `source/html/views/corporate.html`,
+      favicon: `./source/favicon.ico`,
+    }),
+    new HtmlWebpackPlugin({
+      filename: `children.html`,
+      template: `source/html/views/children.html`,
+      favicon: `./source/favicon.ico`,
+    }),
+    new HtmlWebpackPlugin({
+      filename: `agents.html`,
+      template: `source/html/views/agents.html`,
+      favicon: `./source/favicon.ico`,
+    }),
+    new HtmlWebpackPlugin({
+      filename: `photos.html`,
+      template: `source/html/views/photos.html`,
       favicon: `./source/favicon.ico`,
     }),
     new CopyWebpackPlugin({

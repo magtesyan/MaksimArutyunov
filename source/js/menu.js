@@ -11,4 +11,3 @@ const toggleMenu = () => {
 
 navToggleOpen.addEventListener(`click`, toggleMenu);
 navToggleClose.addEventListener(`click`, toggleMenu);
-

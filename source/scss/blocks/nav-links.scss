@@ -33,6 +33,8 @@
 
     &_hidden {
       display: none;
+      transition: all 5s ease-out;
+      -webkit-transition: all 5s ease-out;
     }
   }
   .nav-links__item {
