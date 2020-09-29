@@ -20,10 +20,15 @@ if (location.href.indexOf('corporate') !== -1) {
 }
 
 if (location.href.indexOf('children') !== -1) {
-  console.log(location.href);
   clearActiveClassOfMenu();
   changeBackground(`./../img/backgrounds/children.webp`, `center top`);
   addActiveClassOfMenu(`.nav-links__item_children`);
+}
+
+if (location.href.indexOf('photos') !== -1) {
+  clearActiveClassOfMenu();
+  changeBackground(`./../img/backgrounds/photos.webp`, `center bottom`);
+  addActiveClassOfMenu(`.nav-links__item_photos`);
 }
 
 if (location.href.indexOf('mafia') !== -1) {
