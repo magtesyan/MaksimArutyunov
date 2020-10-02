@@ -70,3 +70,7 @@ if (location.href.indexOf('kinder-quiz') !== -1) {
 if (location.href.indexOf('american-dream') !== -1) {
   changeBackground(`./../img/backgrounds/american-dream.webp`, `center center`);
 }
+
+if (location.href.indexOf('alias') !== -1) {
+  changeBackground(`./../img/backgrounds/alias.webp`, `20% center`);
+}
