@@ -1,0 +1,16 @@
+.nav-phone {
+  align-self: center;
+  font-size: 21px;
+  color: $white;
+
+  &:hover {
+    color: $yellow;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: $md) {
+  .nav-phone {
+    font-size: 14px;
+  }
+}

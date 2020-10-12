@@ -22,7 +22,7 @@
   }
 }
 
-@media (max-width: $md) {
+@media (max-width: $mdUp) {
   .nav__links {
     position: absolute;
     flex-direction: column;
@@ -49,6 +49,10 @@
       width: 100%;
       padding: 10px 0;
       color: $black;
+    }
+
+    a:hover {
+      color: $grey;
     }
 
     &_active {
