@@ -7,7 +7,7 @@
   background-color: $black;
   background-image: url("./../img/backgrounds/index.webp");
   background-size: cover;
-  background-position: 70% bottom;
+  background-position: center top;
 }
 
 .header__title {
@@ -24,4 +24,12 @@
   width: 100%;
   height: 100%;
   z-index: 2;
+}
+
+@media (max-width: $md) {
+  .header {
+    background-image: url("./../img/backgrounds/index1.webp");
+    background-size: cover;
+    background-position: 70% top;
+  }
 }

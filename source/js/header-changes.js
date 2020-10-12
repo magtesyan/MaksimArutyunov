@@ -27,7 +27,7 @@ if (location.href.indexOf('children') !== -1) {
 
 if (location.href.indexOf('photos') !== -1) {
   clearActiveClassOfMenu();
-  changeBackground(`./../img/backgrounds/photos.webp`, `center bottom`);
+  changeBackground(`./../img/backgrounds/photos.webp`, `center top`);
   addActiveClassOfMenu(`.nav-links__item_photos`);
 }
 
