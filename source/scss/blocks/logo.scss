@@ -2,8 +2,8 @@
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  height: 65px;
   width: 182px;
+  height: 65px;
 }
 
 .logo__img {
@@ -14,6 +14,7 @@
 @media (max-width: $md) {
   .logo {
     height: 45px;
+    width: 117px;
   }
   .logo__img {
     width: 117px;
