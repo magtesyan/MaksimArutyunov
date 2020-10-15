@@ -1,6 +1,10 @@
 .gallery {
   background-color: $black;
   color: $greyLight;
+
+  &_agents {
+    padding-bottom: 20px;
+  }
 }
 
 .gallery__title {
@@ -15,6 +19,17 @@
   width: $mdUp;
 }
 
+.gallery__agents-text {
+  width: 600px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  color: $black;
+  background-color: rgba($yellow, 0.8);
+}
+
 @media (max-width: $mdUp) {
   .gallery__intro {
     width: $md;
@@ -24,5 +39,10 @@
 @media (max-width: $md) {
   .gallery__intro {
     width: 300px;
+  }
+
+  .gallery__agents-text {
+    width: 300px;
+    font-size: 16px;
   }
 }

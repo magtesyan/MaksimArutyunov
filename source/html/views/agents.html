@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Максим Арутюнов - ведущий для взрослых и детей</title>
+    <link rel="stylesheet" href="/vendors/normalize-css/normalize.min.css" />
+  </head>
+  <body class="page">
+    <div class="page__wrapper page-wrapper">
+      <!--header.html-->
+      <%= _.template(require('../includes/header.html').default)({}) %>
+      <main class="page__main">
+        <!--gallery/index.html-->
+        <%= _.template(require('../includes/gallery/agents.html').default)({}) %>
+      </main>
+      <!--footer.html-->
+      <%= _.template(require('../includes/footer.html').default)({}) %>
+    </div>
+  </body>
+</html>

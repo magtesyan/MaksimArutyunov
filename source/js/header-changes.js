@@ -25,6 +25,12 @@ if (location.href.indexOf('children') !== -1) {
   addActiveClassOfMenu(`.nav-links__item_children`);
 }
 
+if (location.href.indexOf('agents') !== -1) {
+  clearActiveClassOfMenu();
+  changeBackground(`./../img/backgrounds/agents.webp`, `center top`);
+  addActiveClassOfMenu(`.nav-links__item_agents`);
+}
+
 if (location.href.indexOf('photos') !== -1) {
   clearActiveClassOfMenu();
   changeBackground(`./../img/backgrounds/photos.webp`, `center top`);
