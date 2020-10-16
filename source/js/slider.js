@@ -24,7 +24,7 @@ let posX2 = 0;
 let posY1 = 0;
 let posY2 = 0;
 let posFinal = 0;
-const lastTrf = -1 * (slides.length - 2) * slideWidth;
+const lastTrf = -1 * (slides.length - 3) * slideWidth;
 let nextTrf = 0;
 let prevTrf = 0;
 let fullnessWidth = fullnessWidthPerSlide * SLIDES_SHOW_COUNT;
@@ -41,10 +41,8 @@ const slide = () => {
   next.classList.toggle(`disabled`, slideIndex === slides.length - SLIDES_SHOW_COUNT);
 };
 
-const getEvent = () => (event.type.search(`touch`) !== -1 ? event.touches[0] : event);
-
-const swipeStart = () => {
-  const evt = getEvent();
+const swipeStart = (event) => {
+  const evt = event.type.search(`touch`) !== -1 ? event.touches[0] : event;
 
   if (allowSwipe) {
     transition = true;
@@ -52,30 +50,22 @@ const swipeStart = () => {
     nextTrf = (slideIndex + 1) * -slideWidth;
     prevTrf = (slideIndex - 1) * -slideWidth;
 
-    // берем начальную позицию курсора
+    // начальная позиция курсора
     posInit = posX1 = evt.clientX;
     posY1 = evt.clientY;
 
-    // убираем плавный переход, чтобы track двигался за курсором без задержки
-    // т.к. он будет включается в функции slide()
     sliderTrack.style.transition = '';
 
-    // и сразу начинаем отслеживать другие события на документе
     document.addEventListener(`touchmove`, swipeAction);
     document.addEventListener(`touchend`, swipeEnd);
     document.addEventListener(`mousemove`, swipeAction);
     document.addEventListener(`mouseup`, swipeEnd);
-
-    sliderList.classList.remove(`grab`);
-    sliderList.classList.add(`grabbing`);
   }
 };
 
-const swipeAction = () => {
-  const evt = getEvent();
-  // для более красивой записи возьмем в переменную текущее свойство transform
+const swipeAction = (event) => {
+  const evt = event.type.search(`touch`) !== -1 ? event.touches[0] : event;
   const style = sliderTrack.style.transform;
-  // считываем трансформацию с помощью регулярного выражения и сразу превращаем в число
   const transform = +style.match(trfRegExp)[0];
 
   posX2 = posX1 - evt.clientX;
@@ -139,9 +129,6 @@ const swipeEnd = () => {
   document.removeEventListener(`touchend`, swipeEnd);
   document.removeEventListener(`mouseup`, swipeEnd);
 
-  sliderList.classList.add(`grab`);
-  sliderList.classList.remove(`grabbing`);
-
   if (allowSwipe) {
     if (Math.abs(posFinal) > posThreshold) {
       if (posInit < posX1) {
@@ -202,7 +189,7 @@ setScaleFullness();
 slider.addEventListener(`touchstart`, swipeStart);
 slider.addEventListener(`mousedown`, swipeStart);
 
-arrows.addEventListener(`click`, function () {
+arrows.addEventListener(`click`, (event) => {
   let target = event.target;
   if (target.classList.contains(`slider__arrows_next`)) {
     slideIndex++;
