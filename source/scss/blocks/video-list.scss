@@ -1,0 +1,14 @@
+.video-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video-list__item {
+  width: 50%;
+}
+
+.video-list__video {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
