@@ -41,7 +41,7 @@ const slide = () => {
   next.classList.toggle(`disabled`, slideIndex === slides.length - SLIDES_SHOW_COUNT);
 };
 
-const swipeStart = (event) => {
+const swipeStart = event => {
   const evt = event.type.search(`touch`) !== -1 ? event.touches[0] : event;
 
   if (allowSwipe) {
@@ -63,7 +63,7 @@ const swipeStart = (event) => {
   }
 };
 
-const swipeAction = (event) => {
+const swipeAction = event => {
   const evt = event.type.search(`touch`) !== -1 ? event.touches[0] : event;
   const style = sliderTrack.style.transform;
   const transform = +style.match(trfRegExp)[0];
@@ -178,8 +178,6 @@ const setScaleFullness = operation => {
       break;
   }
   fullnessWidth >= sliderScaleWidth - SCALE_BORDER_WIDTH ? (fullnessWidth = sliderScaleWidth - SCALE_BORDER_WIDTH) : true;
-  console.log(fullnessWidth);
-  console.log(sliderScaleWidth);
   fullness.style.width = `${fullnessWidth}px`;
 };
 
@@ -189,7 +187,7 @@ setScaleFullness();
 slider.addEventListener(`touchstart`, swipeStart);
 slider.addEventListener(`mousedown`, swipeStart);
 
-arrows.addEventListener(`click`, (event) => {
+arrows.addEventListener(`click`, event => {
   let target = event.target;
   if (target.classList.contains(`slider__arrows_next`)) {
     slideIndex++;

@@ -1,0 +1,17 @@
+.other .photo-list__item {
+  width: 280px;
+}
+
+.other .photo-list__title {
+  font-size: 15px;
+}
+
+.other__title {
+  color: $white;
+}
+
+@media (max-width: $md) {
+  .other .photo-list__item {
+    width: 160px;
+  }
+}
