@@ -13,10 +13,16 @@
   color: $white;
 }
 
-.gallery__intro {
+.gallery__intro,
+.gallery__intro-list {
   margin: auto;
   margin-bottom: 10px;
   width: $mdUp;
+}
+
+.gallery__intro-list {
+  padding-left: 25px;
+  list-style: disc;
 }
 
 .gallery__agents-text {
@@ -31,13 +37,15 @@
 }
 
 @media (max-width: $mdUp) {
-  .gallery__intro {
+  .gallery__intro,
+  .gallery__intro-list {
     width: $md;
   }
 }
 
 @media (max-width: $md) {
-  .gallery__intro {
+  .gallery__intro,
+  .gallery__intro-list {
     width: 300px;
   }
 
