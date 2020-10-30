@@ -1,13 +1,17 @@
-<h1 align="center">maksimarutyunov.ru</h1>
+# Сайт-визитка Максима Арутюнова
 
-## Установка
+---
 
-```sh
-npm i
+В проекте реализованы дизайн и верстка сайта ведущего мероприятий:
+* Ссылка на сайт: [maksimarutyunov.ru](https://maksimarutyunov.ru/)
+
+---
+
+### Стек
+HTML, CSS (SCSS), JS<br>
+сборка Webpack
+
+Для запуска используйте команду:
 ```
-
-## Запуск
-
-```sh
 npm start
 ```
