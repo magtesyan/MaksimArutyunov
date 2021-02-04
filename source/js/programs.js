@@ -43,6 +43,11 @@ const childrenPrograms = [
     imgSrc: `mafia-kids`,
   },
   {
+    name: `Alias`,
+    href: `/corporate/alias.html`,
+    imgSrc: `alias`,
+  },
+  {
     name: `Киндер квиз`,
     href: `/children/kinder-quiz.html`,
     imgSrc: `kinder-quiz`,
