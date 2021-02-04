@@ -57,14 +57,6 @@ if (location.href.indexOf('kid-mafia') !== -1) {
   changeBackground(`./../img/backgrounds/kid-mafia.webp`, `center center`);
 }
 
-if (location.href.indexOf('quest-spy') !== -1) {
-  changeBackground(`./../img/backgrounds/quest-spy.webp`, `right top`);
-}
-
-if (location.href.indexOf('quest-football') !== -1) {
-  changeBackground(`./../img/backgrounds/quest-football.webp`, `center top`);
-}
-
 if (location.href.indexOf('crocodile') !== -1) {
   changeBackground(`./../img/backgrounds/crocodile.webp`, `center right`);
 }

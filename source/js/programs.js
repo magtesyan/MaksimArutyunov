@@ -43,16 +43,6 @@ const childrenPrograms = [
     imgSrc: `mafia-kids`,
   },
   {
-    name: `Квест футбол`,
-    href: `/children/quest-football.html`,
-    imgSrc: `football`,
-  },
-  {
-    name: `Квест шпион`,
-    href: `/children/quest-spy.html`,
-    imgSrc: `spy`,
-  },
-  {
     name: `Киндер квиз`,
     href: `/children/kinder-quiz.html`,
     imgSrc: `kinder-quiz`,
