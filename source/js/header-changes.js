@@ -78,5 +78,5 @@ if (location.href.indexOf('american-dream') !== -1) {
 }
 
 if (location.href.indexOf('alias') !== -1) {
-  changeBackground(`./../img/backgrounds/alias.webp`, `20% center`);
+  changeBackground(`./../img/backgrounds/alias.webp`, `center top`);
 }
